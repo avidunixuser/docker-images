@@ -6,9 +6,9 @@ FROM dse-base
 
 MAINTAINER "DataStax, Inc <info@datastax.com>"
 
-ARG VERSION=6.5.0SNAPSHOT
+ARG VERSION=6.5.0-EAP1
 ARG URL_PREFIX=http://localhost
-ARG OPSCENTER_TARBALL=opscenter-${VERSION}.tar.gz
+ARG OPSCENTER_TARBALL=ds-labs-20180125-opscenter.tar.gz
 ARG OPSCENTER_DOWNLOAD_URL=${URL_PREFIX}/${OPSCENTER_TARBALL}
 
 # Install missing packages

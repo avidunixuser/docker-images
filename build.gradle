@@ -46,11 +46,11 @@ components.each {
     defaultPropertyValue "${it}LatestVersion", "false"
 }
 
-defaultPropertyValue 'downloadUrlPrefix', 'https://downloads.datastax.com/enterprise'
-defaultPropertyValue 'downloadServerUrlTemplate', "${downloadUrlPrefix}/dse-\${VERSION}-bin.tar.gz"
-defaultPropertyValue 'downloadAgentUrlTemplate', "${downloadUrlPrefix}/datastax-agent-\${VERSION}.tar.gz"
-defaultPropertyValue 'downloadOpscenterUrlTemplate', "${downloadUrlPrefix}/opscenter-\${VERSION}.tar.gz"
-defaultPropertyValue 'downloadStudioUrlTemplate', "${downloadUrlPrefix}/datastax-studio-\${VERSION}.tar.gz"
+defaultPropertyValue 'downloadUrlPrefix', 'http://labs.datastax.lan/ds-labs-20180125/tar/enterprise'
+defaultPropertyValue 'downloadServerUrlTemplate', "${downloadUrlPrefix}/ds-labs-20180125-dse.tar.gz"
+defaultPropertyValue 'downloadAgentUrlTemplate', "${downloadUrlPrefix}/ds-labs-20180125-datastax-agent.tar.gz"
+defaultPropertyValue 'downloadOpscenterUrlTemplate', "${downloadUrlPrefix}/ds-labs-20180125-opscenter.tar.gz"
+defaultPropertyValue 'downloadStudioUrlTemplate', "${downloadUrlPrefix}/ds-labs-20180125-datastax-studio-6.0.0-EAP1.tar.gz"
 
 // configure dcompose plugin logging to show build image progress
 System.setProperty("org.slf4j.simpleLogger.log.com.github.dockerjava.core.command.BuildImageResultCallback", "debug")
