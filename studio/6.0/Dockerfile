@@ -7,9 +7,9 @@ FROM dse-base
 MAINTAINER "DataStax, Inc <info@datastax.com>"
 
 # Get commandline parameters
-ARG VERSION=6.0.0-EAP1
+ARG VERSION=6.0.0-EAP2
 ARG URL_PREFIX=http://localhost
-ARG STUDIO_TARBALL=ds-labs-20180125-datastax-studio-6.0.0-EAP1.tar.gz
+ARG STUDIO_TARBALL=ds-labs-20180228-datastax-studio-6.0.0-EAP2.tar.gz
 ARG STUDIO_DOWNLOAD_URL=${URL_PREFIX}/${STUDIO_TARBALL}
 
 
