@@ -43,7 +43,8 @@ if [ "$BROADCAST_ADDRESS" = 'auto' ]; then
 fi
 
 # By default, tell drivers/clients to use the same address that other nodes are using to communicate with us
-: ${BROADCAST_RPC_ADDRESS:=$BROADCAST_ADDRESS}
+: ${NATIVE_TRANSPORT_BROADCAST_ADDRESS=$BROADCAST_ADDRESS}
+: ${NATIVE_TRANSPORT_ADDRESS=$BROADCAST_ADDRESS}
 
 # SEEDS is for other nodes in the cluster we know about. If not set (because we're the only node maybe), just
 # default to ourself
@@ -55,12 +56,12 @@ sed -ri 's/(- seeds:).*/\1 "'"$SEEDS"'"/' "$CASSANDRA_CONFIG"
 # Update the following settings in the cassandra.yaml file based on the ENV variable values
 for name in \
     broadcast_address \
-    broadcast_rpc_address \
+    native_transport_broadcast_address \
     cluster_name \
     listen_address \
     num_tokens \
-    rpc_address \
-    start_rpc \
+    native_transport_address \
+    start_native_transport \
     ; do
     var="${name^^}"
     val="${!var}"
